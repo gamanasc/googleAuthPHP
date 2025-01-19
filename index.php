@@ -8,8 +8,8 @@ $dotenv->load();
 
 // Inicializando o cliente do google
 $client = new Google\Client;
-$client->setClientId( getenv("CLIENT_ID") );
-$client->setClientSecret( getenv("CLIENT_SECRET") );
+$client->setClientId( $_ENV["CLIENT_ID"] );
+$client->setClientSecret( $_ENV["CLIENT_SECRET"] );
 $client->setRedirectUri("http://localhost:8000/redirect.php");
 
 ?>
