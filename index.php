@@ -1,3 +1,19 @@
+<?php
+
+require __DIR__ . "/vendor/autoload.php";
+
+// Puxando as variáveis de ambiente do arquivo .env
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+// Inicializando o cliente do google
+$client = new Google\Client;
+$client->setClientId( getenv("CLIENT_ID") );
+$client->setClientSecret( getenv("CLIENT_SECRET") );
+$client->setRedirectUri("http://localhost:8000/redirect.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
