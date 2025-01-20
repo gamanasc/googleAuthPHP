@@ -14,6 +14,9 @@
         }
     ?>
 
+    <img src="<?= $_SESSION['picture'] ?>" alt="">
     <h1>Bem vindo, <?= $_SESSION['name'] ?></h1>
+    <p><?= $_SESSION['email'] ?></p>
+    <a href="logout.php">Sair</a>
 </body>
 </html>
