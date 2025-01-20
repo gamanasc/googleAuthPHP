@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+
+if(isset($_SESSION['name'])){
+    header('Location: logado.php');
+    exit;
+}
+
 require __DIR__ . "/vendor/autoload.php";
 
 // Puxando as variáveis de ambiente do arquivo .env
